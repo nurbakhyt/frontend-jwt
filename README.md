@@ -1,6 +1,8 @@
-# onlinesim
+# Vue-JWT auth
 
 > A Vue.js project
+
+The Laravel API [here](https://github.com/nurbakhyt/api-jwt)
 
 ## Build Setup
 
