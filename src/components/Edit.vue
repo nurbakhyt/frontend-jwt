@@ -8,7 +8,7 @@
         </md-input-container>
         <md-input-container>
           <label>Email</label>
-          <md-input v-model="profile.email" type="string"></md-input>
+          <md-input v-model="profile.email" type="string" required></md-input>
         </md-input-container>
         <md-input-container>
           <label>Телефон</label>
@@ -72,7 +72,7 @@ export default {
         })
         .catch(error => {
           this.isLoading = false
-          this.error = error.body.error
+          this.error = error.body
         })
     }
   }

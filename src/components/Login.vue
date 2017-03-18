@@ -37,7 +37,7 @@ export default {
     submit () {
       const data = {
         client_id: 2,
-        client_secret: 'dNgTymMS46K2TFdQtxvfmzEWpQg1YDiLtz8Fs9Vo',
+        client_secret: 'nGlHtW85hPQZlgGuOEmIBJeTTMbH5Or1E5zytzGv',
         grant_type: 'password',
         username: this.email,
         password: this.password

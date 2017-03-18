@@ -35,7 +35,9 @@ export default {
         .catch(error => {
           this.isLoading = false
           console.log('error', error.body)
-          this.error = error.body.error
+          this.error = error.body
+          this.$auth.destroyToken()
+          this.$router.push('/login')
         })
   }
 }

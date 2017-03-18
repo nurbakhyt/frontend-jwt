@@ -4,7 +4,7 @@
       <form @submit.stop.prevent="submit" md-align="center">
         <md-input-container>
           <label>Имя</label>
-          <md-input v-model="profile.name" type="string"></md-input>
+          <md-input v-model="profile.name" type="string" required></md-input>
         </md-input-container>
         <md-input-container>
           <label>Email</label>
@@ -49,7 +49,7 @@ export default {
 
   methods: {
     submit () {
-      if (this.profile.email && this.profile.password) {
+      if (this.profile.name && this.profile.email && this.profile.password) {
         this.isLoading = true
         this.error = ''
         this.message = ''
@@ -67,7 +67,7 @@ export default {
           })
           .catch(error => {
             this.isLoading = false
-            this.error = error.body.error
+            this.error = error.body
           })
       } else {
         console.log('Введите логин и пароль')
